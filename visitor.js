@@ -6,7 +6,7 @@ class Visitor {
     this.response = 'El visitante fue almacenado con éxito';
   }
 
-  addVisitor(data) {
+  saveVisitor(data) {
     let visitor = new this.model(data);
     visitor.save((error) => {
         if (error) return handleError(error);

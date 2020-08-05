@@ -10,14 +10,12 @@ class Database {
     }, { collection: 'visitors' });
   }
 
-  connect() {
-    (async () => {
-      try {
-        await mongoose.connect(this.url, this.settings);
-      } catch (error) {
-        return handleError(error);
-      }
-    })();
+  async connect() {
+    try {
+      await mongoose.connect(this.url, this.settings);
+    } catch (error) {
+      return handleError(error);
+    }
   }
 
   getSchema() {
