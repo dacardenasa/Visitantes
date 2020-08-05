@@ -1,0 +1,30 @@
+{
+  "name": "visitantes",
+  "version": "1.0.0",
+  "description": "Challenge 8 Express MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dacardenasa/Visitantes.git"
+  },
+  "keywords": [
+    "Express",
+    "MongoDB",
+    "NodeJS",
+    "Javascript"
+  ],
+  "author": "Diego Cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dacardenasa/Visitantes/issues"
+  },
+  "homepage": "https://github.com/dacardenasa/Visitantes#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.27",
+    "pug": "^3.0.0"
+  }
+}
