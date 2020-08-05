@@ -9,7 +9,7 @@ class Visitor {
   addVisitor(data) {
     let visitor = new this.model(data);
     visitor.save((error) => {
-      if (error) return handleError(error);
+        if (error) return handleError(error);
     });
     return this.response;
   }
