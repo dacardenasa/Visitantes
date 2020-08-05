@@ -4,9 +4,9 @@ const Database = require('./database');
 const Visitor = require('./visitor');
 const port = 3000;
 
-const dbConnection = new Database('mongodb://localhost:27017/test', { 
-  useNewUrlParser: true
-});
+const dbConnection = new Database('mongodb://localhost:27017/mongo-1', 
+  { useNewUrlParser: true }
+);
 
 dbConnection.connect();
 let schema = dbConnection.getSchema();
