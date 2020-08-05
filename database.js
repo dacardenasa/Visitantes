@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 class Database {
-  constructor(url, settings) {
+  constructor(environmentVar,url, settings) {
     this.url = url;
     this.settings = settings;
+    this.environmentVar = environmentVar;
     this.schema = mongoose.Schema({
       date: { type: Date, default: Date.now },
       name: String,
@@ -12,7 +13,7 @@ class Database {
 
   async connect() {
     try {
-      await mongoose.connect(this.url, this.settings);
+      await mongoose.connect(this.environmentVar || this.url, this.settings);
     } catch (error) {
       return handleError(error);
     }

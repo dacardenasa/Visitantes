@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const Database = require('./database');
 const Visitor = require('./visitor');
+require('dotenv').config();
 const port = 3000;
 
-const dbConnection = new Database('mongodb://localhost:27017/test', 
+const dbConnection = new Database(process.env.MONGODB_URL,'mongodb://localhost:27017/mongo-1', 
   { useNewUrlParser: true }
 );
 
