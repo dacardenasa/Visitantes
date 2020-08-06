@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div(class="ui center aligned container")
+    h1(style="text-align: center; margin-top: 20px;")='Lista Visitantes'
+      table(class="ui red table" style="margin-top: 10vh; margin-bottom: 10vh;")
+        thead
+          tr
+            th='id'
+            th='name'
+            th='count'
+        tbody
+          each visitor in visitors
+            tr
+              td=`${visitor._id}`
+              td=`${visitor.name}`
+              td=`${visitor.count}`

@@ -5,10 +5,6 @@ class Database {
     this.url = url;
     this.settings = settings;
     this.environmentVar = environmentVar;
-    this.schema = mongoose.Schema({
-      date: { type: Date, default: Date.now },
-      name: String,
-    }, { collection: 'visitors' });
   }
 
   async connect() {
@@ -17,10 +13,6 @@ class Database {
     } catch (error) {
       return handleError(error);
     }
-  }
-
-  getSchema() {
-    return this.schema;
   }
 
 }
