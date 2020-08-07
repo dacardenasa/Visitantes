@@ -22,9 +22,11 @@ class Visitor {
         addNewVisitor();
       } else {
         visitor.count += 1;
-        visitor.save((error) => {
-          if (error) return handleError(error);
-        });
+        (async function(){
+          await visitor.save((error) => {
+            if (error) return handleError(error);
+          });
+        }());
       }
     });
   }
@@ -32,7 +34,6 @@ class Visitor {
   async listVisitors() {
     return await this.model.find((err, visitors) => {
         if (err) return handleError(err);
-        return visitors;
     });
   }
 }
